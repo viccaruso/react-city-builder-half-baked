@@ -17,7 +17,7 @@ function App() {
   const [waterfrontId, setWaterfrontId] = useState(1);
   const [castleId, setCastleId] = useState(1);
   const [cityName, setCityName] = useState('Defaultimore');
-  const [slogans, setSlogans] = useState(['The City of Excellence!']);
+  const [slogans, setSlogans] = useState(['The City of Excellence!', 'Tomorrow, Today!']);
 
   return (
     <div className="App">
@@ -42,7 +42,7 @@ function App() {
 
         </section>
         {/* here, the SloganForm component takes in the setSlogans state handler function and the slogans array that live in state */}
-        <SloganForm setSlogans={setSlogans} />
+        <SloganForm setSlogans={setSlogans} slogans={slogans}/>
         {/* here, the SloganList component takes the array of slogans that lives in state */}
         <SloganList slogans={slogans} />
 
